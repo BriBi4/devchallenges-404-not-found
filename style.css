@@ -1,0 +1,151 @@
+@font-face {
+	font-family: 'Inconsolata';
+	src: url('Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf') format('truetype-variations');
+}
+
+@font-face {
+	font-family: 'Space Mono';
+	src: url('Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+	--primary-color: #333333;
+	--secondary-color: #4f4f4f;
+	--tertiary-color: #bdbdbd;
+}
+
+html, body, h1, h2, p, div {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100%;
+}
+
+header, main, footer {
+	margin: 0;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+header, footer {
+	padding-top: 2.6%;
+	padding-bottom: 2.6%;
+}
+
+.page-title {
+	font-family: 'Inconsolata';
+	font-size: 1.5em;
+	font-weight: 700;
+	letter-spacing: -0.1em;
+	text-transform: uppercase;
+	color: var(--primary-color);
+}
+
+.main-flex-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 5%;
+}
+
+main {
+	margin-bottom: 4em;
+}
+
+.main-flex-container > * {
+	flex-basis: 100%;
+}
+
+.main-img {
+	max-width: 100%;
+}
+
+.main-section-title, .main-section-text {
+	font-family: 'Space Mono';
+	line-height: 1.5em;
+}
+
+.main-section-title {
+	margin-bottom: 0.6em;
+	font-size: 4em;
+	font-weight: 700;
+	letter-spacing: -0.05em;
+	color: var(--primary-color);
+}
+
+.main-section-text {
+	margin-bottom: 2.7em;
+	width: 65%;
+	font-size: 1.5em;
+	font-weight: 400;
+	letter-spacing: -0.05em;
+	color: var(--secondary-color);
+}
+
+.main-section-button {
+	padding: 1.5em 2.7em 1.5em 2.7em;
+	border: 0;
+	font-family: 'Space Mono';
+	font-size: 0.875em;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: var(--primary-color);
+	color: white;
+}
+
+.main-section-button:hover {
+	background-color: var(--secondary-color);
+}
+
+.signature-text {
+	text-align: center;
+	font-family: 'Montserrat';
+	font-size: 0.875em;
+	color: var(--tertiary-color);
+}
+
+.signature-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.signature-link:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+
+	body {
+		gap: 3em;
+	}
+
+	.main-flex-container {
+		flex-direction: column;
+	}
+
+	.main-section-title {
+		margin-top: 0.6em;
+		font-size: 3em;
+	}
+
+	.main-section-text {
+		width: 90%;
+		font-size: 1.125;
+	}
+
+}
